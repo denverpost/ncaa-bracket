@@ -1,4 +1,4 @@
-
+body { min-width:900px; }
 @media print{@page {size: landscape}}
 
 .slot, .slotnohover { width: 80px; height: 6px; padding: 1px 3px 5px 3px; border: 1px solid #eaeaea; font: 10px Arial; background-color: #f0f0f0; margin-bottom: 2px;  }
