@@ -5,7 +5,6 @@ var sheetCount = 1;
 
 $(document).ready(function(){
 
-
   loadData(sheetCount);
   //POPULATE DATA FROM GOOGLE SPREADSHEET
   function loadData(which) {
@@ -58,6 +57,9 @@ $(document).ready(function(){
     //console.log(allData.length, ds.column("id").data.length);
       for (var k=0; k<allData.length; k++) {
         //console.log(k, allData[k][0].seed, allData[k][0].myid, allData[k][0].name);
+
+        if ( allData[k][0].name == null ) allData[k][0].name = '';
+
         if (k <= 31) {
            $("#c1" + "s" + (k + 1)).text("(" + allData[k][0].seed + ") " + allData[k][0].name);
            continue;
