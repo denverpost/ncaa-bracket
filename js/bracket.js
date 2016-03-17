@@ -56,6 +56,8 @@ $(document).ready(function(){
     function showData() {
     //console.log(allData.length, ds.column("id").data.length);
       for (var k=0; k<allData.length; k++) {
+        if ( typeof allData[k] === 'undefined' ) continue;
+
         //console.log(k, allData[k][0].seed, allData[k][0].myid, allData[k][0].name);
 
         if ( allData[k][0].name == null ) allData[k][0].name = '';
