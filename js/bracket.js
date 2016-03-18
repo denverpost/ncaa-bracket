@@ -19,7 +19,8 @@ $(document).ready(function(){
 
       ds.fetch({ 
         success : function() {
-          //console.log(ds.column("thetalk").data);
+          //console.log("Sheet: ", which, "Columns: ", ds.columnNames());
+          //console.log("Row Count ", this.length);
           parseData();
         },
         error : function() {
@@ -60,7 +61,8 @@ $(document).ready(function(){
 
         //console.log(k, allData[k][0].seed, allData[k][0].myid, allData[k][0].name);
 
-        if ( allData[k][0].name == null ) allData[k][0].name = '';
+        if ( allData[k][0]['name'] == null ) allData[k][0]['name'] = '';
+        if ( allData[k][0]['notes'] == null ) allData[k][0]['notes'] = '';
 
         if (k <= 31) {
            $("#c1" + "s" + (k + 1)).text("(" + allData[k][0].seed + ") " + allData[k][0].name);
